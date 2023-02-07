@@ -2,7 +2,7 @@ import pyaudio
 import wave
 import numpy as np
 
-Gain = 1.4 # adjust the gain here
+Gain = 0.6 # adjust the gain here
 
 RATE = 44100
 CHUNK = 1024
@@ -10,6 +10,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "output.wav"
+
 p = pyaudio.PyAudio()
 
 stream = p.open(format=FORMAT,
@@ -19,7 +20,9 @@ stream = p.open(format=FORMAT,
                 frames_per_buffer=CHUNK)
 
 print("* recording")
+
 stream.start_stream()
+
 frames = []
 
 for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
