@@ -7,3 +7,4 @@ For example, to increase the sound by 2, do the following  ```Gain = 2```
 It is also possible to reduce the sound using, on the contrary, minus, for example  ```Gain = -0.6```
 
 To change the time, change the line ```RECORD_SECONDS = 5```
+.
